@@ -1,4 +1,4 @@
-name: Check Pull Request # The name of the workflow
+name: Check Pull Request  # The name of the workflow
 
 on:
   pull_request:  # This workflow will run when a pull request is created or updated
@@ -20,6 +20,9 @@ jobs:
 
     - name: Install dependencies  # Step to install the project dependencies
       run: npm install  # Run 'npm install' to install all dependencies listed in package.json
+
+    - name: Run ESLint for linting check  # Step to run linting using ESLint
+      run: npm run lint  # Run the linting command defined in package.json ("npm run lint")
 
     - name: Run unit tests  # Step to run the unit tests
       run: npm test  # Run 'npm test' which will execute the tests defined in the project
