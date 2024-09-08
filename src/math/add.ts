@@ -7,5 +7,5 @@
  */
 export const add = (a: number, b: number): number => {
     // THIS FUNCTION WAS DUMB AND BROKE MY COMPONENT :(
-    return a + b + a;
+    return a + b + a + a;
 }
