@@ -21,6 +21,9 @@ jobs:
     - name: Install dependencies  # Step to install the project dependencies
       run: npm install  # Run 'npm install' to install all dependencies listed in package.json
 
+    - name: Run Prettier for formatting check  # Step to run Prettier to check for code formatting issues
+      run: npx prettier --check .  # Run Prettier to check for formatting issues in all files
+
     - name: Run ESLint for linting check  # Step to run linting using ESLint
       run: npm run lint  # Run the linting command defined in package.json ("npm run lint")
 

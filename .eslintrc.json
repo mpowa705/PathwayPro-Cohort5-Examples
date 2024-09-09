@@ -1,15 +1,6 @@
 {
-  "extends": ["plugin:@typescript-eslint/recommended"],
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
-    "react/no-unescaped-entities": 0,
-    "indent": ["error", 2], // 2 spaces for indentation
-    "quotes": ["error", "single"], // Single quotes for strings
-    "semi": ["error", "always"], // Always use semicolons
-    "no-trailing-spaces": "error", // Disallow trailing whitespace at the end of lines
-    "eol-last": ["error", "always"], // Require newline at the end of files
-    "comma-dangle": ["error", "never"], // Disallow trailing commas
-    "space-before-function-paren": ["error", "never"], // Disallow space before function parenthesis
-    "arrow-spacing": ["error", { "before": true, "after": true }], // Require space before and after arrow functions
     "no-restricted-syntax": [
       "error",
       {
@@ -20,8 +11,6 @@
     "eqeqeq": ["error", "always"], // Require strict equality operators
     "curly": ["error", "all"], // Require curly braces for all control statements
     "prefer-const": "error", // Prefer const for variables that are not reassigned
-    "object-curly-spacing": ["error", "always"], // Enforce consistent spacing inside braces of object literals
-    "array-bracket-spacing": ["error", "never"], // Enforce consistent spacing inside array brackets
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }], // Prevent multiple consecutive empty lines
     "key-spacing": ["error", { "beforeColon": false, "afterColon": true }], // Enforce consistent spacing between keys and values in object literals
     "newline-before-return": "error", // Enforce newline before return statements
