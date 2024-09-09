@@ -1,31 +1,31 @@
-name: Check Pull Request  # The name of the workflow
+name: Check Pull Request # The name of the workflow
 
 on:
-  pull_request:  # This workflow will run when a pull request is created or updated
+  pull_request: # This workflow will run when a pull request is created or updated
     branches:
-      - main  # Specify that the workflow should only run on pull requests targeting the 'main' branch
+      - main # Specify that the workflow should only run on pull requests targeting the 'main' branch
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Use the latest version of Ubuntu as the runner for this job
+    runs-on: ubuntu-latest # Use the latest version of Ubuntu as the runner for this job
 
     steps:
-    - name: Checkout repository  # Step to check out the code from the repository
-      uses: actions/checkout@v3  # Use the GitHub Action for checking out the repository code
+      - name: Checkout repository # Step to check out the code from the repository
+        uses: actions/checkout@v3 # Use the GitHub Action for checking out the repository code
 
-    - name: Set up Node.js v22.8.0  # Step to set up Node.js in the runner
-      uses: actions/setup-node@v3  # Use the official setup-node action from GitHub
-      with:
-        node-version: '22.8.0'  # Specify the exact version of Node.js to use
+      - name: Set up Node.js v22.8.0 # Step to set up Node.js in the runner
+        uses: actions/setup-node@v3 # Use the official setup-node action from GitHub
+        with:
+          node-version: "22.8.0" # Specify the exact version of Node.js to use
 
-    - name: Install dependencies  # Step to install the project dependencies
-      run: npm install  # Run 'npm install' to install all dependencies listed in package.json
+      - name: Install dependencies # Step to install the project dependencies
+        run: npm install # Run 'npm install' to install all dependencies listed in package.json
 
-    - name: Run Prettier for formatting check  # Step to run Prettier to check for code formatting issues
-      run: npx prettier --check .  # Run Prettier to check for formatting issues in all files
+      - name: Run Prettier for formatting check # Step to run Prettier to check for code formatting issues
+        run: npx prettier --check . # Run Prettier to check for formatting issues in all files
 
-    - name: Run ESLint for linting check  # Step to run linting using ESLint
-      run: npm run lint  # Run the linting command defined in package.json ("npm run lint")
+      - name: Run ESLint for linting check # Step to run linting using ESLint
+        run: npm run lint # Run the linting command defined in package.json ("npm run lint")
 
-    - name: Run unit tests  # Step to run the unit tests
-      run: npm test  # Run 'npm test' which will execute the tests defined in the project
+      - name: Run unit tests # Step to run the unit tests
+        run: npm test # Run 'npm test' which will execute the tests defined in the project
