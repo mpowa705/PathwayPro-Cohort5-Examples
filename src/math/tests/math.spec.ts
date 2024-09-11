@@ -23,6 +23,7 @@ test('Should return 3 when adding 1 + 2 (positive case)', () => {
 /**
  * A negative test case ensures the function does not return an incorrect result.
  * Again, following the Arrange-Act-Assert pattern for clarity.
+ * Negative test cases are good to write after fixing a bug to ensure that the bug never occurs again.
  */
 test('Should not return 47 when adding 1 + 2 (negative case)', () => {
   // Arrange: Set up the inputs
