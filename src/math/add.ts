@@ -6,6 +6,6 @@
  * @returns {number} The sum of the two numbers.
  */
 export const add = (a: number, b: number): number => {
-    console.log('hi');
+  console.log(a);
   return a + b;
 };
