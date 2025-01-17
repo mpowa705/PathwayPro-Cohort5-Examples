@@ -6,9 +6,9 @@
  * @returns {number} The sum of the two numbers.
  */
 export const isEven = (a: number): string => {
-  if ((a % 2) === 0) {
+  if (a % 2 === 0) {
     return "Even";
   } else {
     return "Odd";
-  } 
+  }
 };
